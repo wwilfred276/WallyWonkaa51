@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎩 WallyWonkaa51</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="app">
+
+<div id="home" class="page active">
+
+<img class="logo" src="logo.jpg">
+
+<button class="select-btn">
+CATEGORIE
+<span>▼</span>
+</button>
+
+<h2>Catégorie 1</h2>
+
+<div class="card" onclick="showPage('cat1')">
+<img src="categorie1.PNG">
+</div>
+
+<h2>Catégorie 2</h2>
+
+<div class="card" onclick="showPage('cat2')">
+<img src="categorie2.PNG">
+</div>
+
+</div>
+
+<div id="cat1" class="page">
+
+<h2>Catégorie 1</h2>
+
+<img src="categorie1.PNG">
+
+</div>
+
+<div id="cat2" class="page">
+
+<h2>Catégorie 2</h2>
+
+<img src="categorie2.PNG">
+
+</div>
+
+<div id="menu" class="page">
+
+<h2>📜 Menu</h2>
+
+<img class="full-img" src="image.jpeg">
+
+</div>
+
+<div id="livraison" class="page">
+
+<h2>🚚 Livraison</h2>
+
+<img class="full-img" src="livraison.jpg">
+
+</div>
+
+<div id="links" class="page">
+
+<h2>🔗 Liens</h2>
+
+<a class="link" href="https://t.me/Wallywonkaa_Bot">Telegram</a>
+
+</div>
+
+</div>
+
+<nav>
+
+<button onclick="showPage('home')">
+🏠
+<span>Accueil</span>
+</button>
+
+<button onclick="showPage('menu')">
+📜
+<span>Menu</span>
+</button>
+
+<button onclick="showPage('livraison')">
+🚚
+<span>Livraison</span>
+</button>
+
+<button onclick="showPage('links')">
+🔗
+<span>Liens</span>
+</button>
+
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>
