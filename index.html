@@ -1,0 +1,61 @@
+<!<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WallyWonkaa51</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+  <section id="home" class="page active">
+    <h1>🎩 WallyWonkaa51</h1>
+    <p class="subtitle">Mini-application officielle</p>
+
+    <img class="main-img" src="logo.jpg.JPG" alt="Accueil">
+
+    <div class="buttons">
+      <button onclick="showPage('menu')">🍔 Voir le menu</button>
+      <button onclick="showPage('livraison')">🚚 Zone de livraison</button>
+      <button onclick="showPage('links')">🔗 Nos réseaux</button>
+    </div>
+  </section>
+
+  <section id="menu" class="page">
+    <h2>🍔 Menu</h2>
+    <img class="main-img" src="menu.jpg.JPG" alt="Menu">
+    <button onclick="showPage('home')">⬅ Retour</button>
+  </section>
+
+  <section id="livraison" class="page">
+    <h2>🚚 Zone de livraison</h2>
+    <img class="main-img" src="livraison.jpg.JPG" alt="Livraison">
+    <button onclick="showPage('home')">⬅ Retour</button>
+  </section>
+
+  <section id="links" class="page">
+    <h2>🔗 Nos réseaux</h2>
+    <div class="buttons">
+      <a href="#" class="link">Telegram</a>
+      <a href="#" class="link">Instagram</a>
+      <a href="#" class="link">Snapchat</a>
+      <a href="#" class="link">Contact</a>
+    </div>
+    <button onclick="showPage('home')">⬅ Retour</button>
+  </section>
+
+</div>
+
+<nav>
+  <button onclick="showPage('home')">🏠<span>Accueil</span></button>
+  <button onclick="showPage('menu')">🍔<span>Menu</span></button>
+  <button onclick="showPage('livraison')">🚚<span>Livraison</span></button>
+  <button onclick="showPage('links')">🔗<span>Liens</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
