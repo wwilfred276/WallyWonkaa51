@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎩 Wally Wonkaa</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+<div class="background"></div>
+
+<div class="app">
+
+<div id="home" class="page active">
+
+<div class="marquee">
+    <div class="marquee-track">
+        <span>🎩 WALLYWONKAA • C'EST PLUS QU'UN SHOP, C'EST UN MOUVEMENT • 🎩</span>
+        <span>🎩 WALLYWONKAA • C'EST PLUS QU'UN SHOP, C'EST UN MOUVEMENT • 🎩</span>
+        <span>🎩 WALLYWONKAA • C'EST PLUS QU'UN SHOP, C'EST UN MOUVEMENT • 🎩</span>
+    </div>
+</div>
+
+<img class="logo" src="logo.jpg">
+
+<button class="select-btn">NOS PRODUITS <span>▼</span></button>
+
+<h2>Catégorie 1</h2>
+<div class="card" onclick="showPage('cat1')">
+<img src="categorie1.PNG">
+</div>
+
+<h2>Catégorie 2</h2>
+<div class="card" onclick="showPage('cat2')">
+<img src="categorie2.PNG">
+</div>
+</div>
+
+<!-- CATÉGORIE 1 -->
+<div id="cat1" class="page">
+<h2>Catégorie 1</h2>
+<img class="full-img" src="categorie1.PNG">
+
+<div class="product-box">
+<img class="product-img" src="produit1.jpg">
+<h3>Filtrer</h3>
+<p>Vous pourrez retrouver tous nos tarifs pour le Filtrer 🍫 directement sur le menu</p>
+<a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20%F0%9F%91%8B%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20Filtrer%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27informations%20%3F%20Merci%20%21">🛒 Commander</a>
+</div>
+
+<div class="product-box">
+<img class="product-img" src="produit2.PNG">
+<h3>Cali USA</h3>
+<p>Vous pourrez retrouver tous nos tarifs pour la Cali USA 🥦 directement sur le menu</p>
+<a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20%F0%9F%91%8B%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20Cali%20USA%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27informations%20%3F%20Merci%20%21">🛒 Commander</a>
+</div>
+
+<button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<!-- CATÉGORIE 2 -->
+<div id="cat2" class="page">
+    <h2>Catégorie 2</h2>
+
+    <img class="full-img" src="categorie2.PNG" alt="Catégorie 2">
+
+    <div class="product-box">
+        <video class="product-video" autoplay muted loop playsinline controls>
+            <source src="produit3.MP4" type="video/mp4">
+        </video>
+
+        <h3>Cocaïne</h3>
+
+        <p>Vous pourrez retrouver tous nos tarifs pour la Mash ❄️ directement sur le menu </p>
+ <a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20👋%0A%0AJe%20suis%20intéressé%28e%29%20par%20Cocaïne%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27in-formations%20%3F%20Merci%20%21">🛒
+Commander</a>
+</div>
+
+<div class="product-box">
+        <video class="product-video" autoplay muted loop playsinline controls>
+            <source src="produit4.MP4" type="video/mp4">
+        </video>
+
+<h3>Héroïne</h3>
+<p>Vous pourrez retrouver tous nos tarifs pour la Kehla directement sur le menu</p>
+<a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20%F0%9F%91%8B%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20H%C3%A9ro%C3%AFne%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27informations%20%3F%20Merci%20%21">🛒 Commander</a>
+</div>
+
+<button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<!-- MENU -->
+<div id="menu" class="page">
+<h2>📜 Menu</h2>
+<img class="full-img" src="image.jpeg">
+</div>
+
+<!-- LIVRAISON -->
+<div id="livraison" class="page">
+<h2>🚚 Livraison</h2>
+<img class="full-img" src="livraison.jpg">
+</div>
+
+<!-- LIENS -->
+<div id="links" class="page">
+<h2>🔗 Liens</h2>
+<a class="link" href="https://t.me/edm45s" target="_blank">Telegram</a>
+<a class="link" href="https://www.tiktok.com/@wallywonka____?_r=1&_t=ZN-97YIsnYRhuo" target="_blank">TikTok</a>
+<button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+</div>
+
+<nav>
+<button onclick="showPage('home')">🏠<span>Accueil</span></button>
+<button onclick="showPage('menu')">📜<span>Menu</span></button>
+<button onclick="showPage('livraison')">🚚<span>Livraison</span></button>
+<button onclick="showPage('links')">🔗<span>Liens</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
