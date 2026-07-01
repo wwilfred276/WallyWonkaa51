@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎩 Wally Wonkaa</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+<!-- ÉCRAN DE CHARGEMENT -->
+<div id="introLoader" class="intro-loader">
+    <div class="loading-overlay">
+        <div class="loading-progress">
+            <div class="loading-fill"></div>
+        </div>
+        <p class="loading-text">CHARGEMENT...</p>
+    </div>
+</div>
+
+<!-- ACCÈS SÉCURISÉ -->
+<div id="accessPage" class="secure-page" style="display:none;">
+    <div class="secure-card">
+        <img class="logo" src="logo.jpg" alt="Wally Wonkaa">
+
+        <div class="secure-lock">🔒</div>
+
+        <h1>ACCÈS SÉCURISÉ</h1>
+        <p>Contactez le support afin d'obtenir votre code d'accès.</p>
+        <p>Sans celui-ci, la connexion est impossible.</p>
+
+        <div class="secure-line"></div>
+
+        <p class="timer-title">VOTRE CODE EXPIRE DANS</p>
+
+        <div class="timer">
+            <div>
+                <strong id="min">15</strong>
+                <span>MIN</span>
+            </div>
+            <b>:</b>
+            <div>
+                <strong id="sec">00</strong>
+                <span>SEC</span>
+            </div>
+        </div>
+
+        <label>🔑 MOT DE PASSE</label>
+        <input id="codeInput" type="password" placeholder="Entrez votre code d'accès...">
+
+        <p id="errorMsg" class="error-msg"></p>
+
+        <button id="loginBtn" class="secure-btn">SE CONNECTER</button>
+    </div>
+</div>
+
+<!-- ACCUEIL -->
+<div id="home" class="banner-urban page">
+
+    <div class="bg-glow"></div>
+
+    <img class="logo" src="logo.jpg" alt="Wally Wonkaa">
+
+    <!-- BANNIÈRE LIVRAISON ANIMÉE -->
+    <div class="delivery-marquee">
+        <div class="delivery-track">
+            <span>🚚 LIVRAISON PARTOUT DANS LE GRAND EST</span>
+            <span>🚚 LIVRAISON PARTOUT DANS LE GRAND EST</span>
+            <span>🚚 LIVRAISON PARTOUT DANS LE GRAND EST</span>
+            <span>🚚 LIVRAISON PARTOUT DANS LE GRAND EST</span>
+        </div>
+    </div>
+
+    <button class="select-btn">NOS PRODUITS <span>▼</span></button>
+
+    <h2>Catégorie 1</h2>
+    <div class="card" onclick="showPage('cat1')">
+        <img src="categorie1.PNG" alt="Catégorie 1">
+    </div>
+
+    <h2>Catégorie 2</h2>
+    <div class="card" onclick="showPage('cat2')">
+        <img src="categorie2.PNG" alt="Catégorie 2">
+    </div>
+
+</div>
+
+<!-- CATÉGORIE 1 -->
+<div id="cat1" class="page">
+    <h2>Catégorie 1</h2>
+    <img class="full-img" src="categorie1.PNG" alt="Catégorie 1">
+
+    <div class="product-box">
+        <img class="product-img" src="produit1.jpg" alt="Produit 1">
+        <h3>calcon</h3>
+        <p>Vous pourrez retrouver tous nos tarifs directement sur le menu</p>
+        <a class="link" href="https://t.me/edm45s" target="_blank">🛒 Commander</a>
+    </div>
+
+    <div class="product-box">
+        <img class="product-img" src="produit2.PNG" alt="Produit 2">
+        <h3>pantalon</h3>
+        <p>Vous pourrez retrouver tous nos tarifs directement sur le menu</p>
+        <a class="link" href="https://t.me/edm45s" target="_blank">🛒 Commander</a>
+    </div>
+
+    <button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<!-- CATÉGORIE 2 -->
+<div id="cat2" class="page">
+    <h2>Catégorie 2</h2>
+    <img class="full-img" src="categorie2.PNG" alt="Catégorie 2">
+
+    <div class="product-box">
+        <video class="product-video" autoplay muted loop playsinline controls>
+            <source src="produit3.MP4" type="video/mp4">
+        </video>
+        <h3>Veste</h3>
+        <p>Vous pourrez retrouver tous nos tarifs directement sur le menu.</p>
+        <a class="link" href="https://t.me/edm45s" target="_blank">🛒 Commander</a>
+    </div>
+
+    <div class="product-box">
+        <video class="product-video" autoplay muted loop playsinline controls>
+            <source src="produit4.MP4" type="video/mp4">
+        </video>
+        <h3>Manteau</h3>
+        <p>Vous pourrez retrouver tous nos tarifs directement sur le menu.</p>
+        <a class="link" href="https://t.me/edm45s" target="_blank">🛒 Commander</a>
+    </div>
+
+    <button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<!-- MENU -->
+<div id="menu" class="page">
+    <h2>📜 Menu</h2>
+    <img class="full-img" src="image.jpeg" alt="Menu">
+</div>
+
+<!-- LIVRAISON -->
+<div id="livraison" class="page">
+    <h2>🚚 Livraison</h2>
+    <img class="full-img" src="livraison.jpg" alt="Livraison">
+</div>
+
+<!-- LIENS -->
+<div id="links" class="page">
+    <h2>🔗 Liens</h2>
+
+    <a class="link" href="https://t.me/edm45s" target="_blank">Telegram</a>
+    <a class="link" href="https://www.tiktok.com/@wallywonka____?_r=1&_t=ZN-97YIsnYRhuo" target="_blank">TikTok</a>
+    <a class="link" href="https://snapchat.com/t/gRYuTGxM" target="_blank">Snapchat</a>
+
+    <button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<!-- MENU BAS -->
+<nav id="bottomNav">
+    <button onclick="showPage('home')">🏠<span>Accueil</span></button>
+    <button onclick="showPage('menu')">📜<span>Menu</span></button>
+    <button onclick="showPage('livraison')">🚚<span>Livraison</span></button>
+    <button onclick="showPage('links')">🔗<span>Liens</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
