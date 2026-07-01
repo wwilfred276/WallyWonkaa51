@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>🎩 Wally Wonkaa</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================================= -->
+<!-- FOND ANIMÉ -->
+<!-- ================================= -->
+
+<div class="bg-animation">
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+
+</div>
+
+<!-- ================================= -->
+<!-- LOADER -->
+<!-- ================================= -->
+
+<div id="introLoader" class="intro-loader">
+
+<div class="loader-content">
+
+<img src="logo.jpg" class="loader-logo">
+
+<h2>WALLY WONKAA</h2>
+
+<p class="loader-subtitle">
+Connexion sécurisée...
+</p>
+
+<div class="loading-progress">
+
+<div class="loading-fill"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE ACCÈS -->
+<!-- ================================= -->
+
+<div id="accessPage"
+class="secure-page"
+style="display:none;">
+
+<div class="secure-card">
+
+<img
+src="logo.jpg"
+class="logo">
+
+<div class="secure-lock">
+
+🔒
+
+</div>
+
+<h1>
+
+ACCÈS SÉCURISÉ
+
+</h1>
+
+<p>
+
+Bienvenue sur la Mini App privée.
+
+</p>
+
+<p>
+
+Entrez votre mot de passe afin d'accéder au catalogue.
+
+</p>
+
+<div class="secure-line"></div>
+
+<p class="timer-title">
+
+CODE VALIDE PENDANT
+
+</p>
+
+<div class="timer">
+
+<div>
+
+<strong id="min">
+
+15
+
+</strong>
+
+<span>
+
+MIN
+
+</span>
+
+</div>
+
+<b>:</b>
+
+<div>
+
+<strong id="sec">
+
+00
+
+</strong>
+
+<span>
+
+SEC
+
+</span>
+
+</div>
+
+</div>
+
+<label>
+
+Mot de passe
+
+</label>
+
+<input
+
+id="codeInput"
+
+type="password"
+
+placeholder="••••"
+
+autocomplete="off">
+
+<p
+
+id="errorMsg"
+
+class="error-msg">
+
+</p>
+
+<button
+
+id="loginBtn"
+
+class="secure-btn">
+
+SE CONNECTER
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE SUCCÈS -->
+<!-- ================================= -->
+
+<div
+id="successPage"
+class="success-page"
+style="display:none;">
+
+<div class="success-card">
+
+<div class="success-check">
+
+✓
+
+</div>
+
+<h2>
+
+Connexion réussie
+
+</h2>
+
+<p>
+
+Bienvenue sur la boutique privée.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- ACCUEIL -->
+<!-- ================================= -->
+
+<div
+id="home"
+class="page"
+style="display:none;">
+
+<header class="shop-topbar">
+
+<button
+
+class="top-btn"
+
+onclick="backToSecure()">
+
+←
+
+</button>
+
+<img
+src="logo.jpg"
+class="top-logo">
+
+<a
+
+href="https://t.me/Wallywonkaa51"
+
+target="_blank"
+
+class="telegram-btn">
+
+<img
+
+src="telegram.PNG"
+
+class="telegram-icon">
+
+</a>
+
+<div class="order-timer">
+
+⏰
+
+<span id="orderTimer">
+
+10:00
+
+</span>
+
+</div>
+
+</header>
+
+<div class="delivery-marquee">
+
+<div class="delivery-track">
+
+<span>
+
+🚚 Livraison partout en Haute-Garonne
+
+</span>
+
+<span>
+
+🚚 Livraison partout en France
+
+</span>
+
+<span>
+
+🔥 Paiement sécurisé
+
+</span>
+
+<span>
+
+⭐ Produits Premium
+
+</span>
+
+</div>
+
+</div>
+
+<div class="home-banner">
+
+<img
+src="loading-bg.PNG"
+class="banner-image">
+
+<div class="banner-overlay">
+
+<h1>
+
+Bienvenue 👋
+
+</h1>
+
+<p>
+
+Découvrez notre sélection privée.
+
+</p>
+
+</div>
+
+</div>
+
+<button class="select-btn">
+
+NOS PRODUITS ▼
+
+</button>
+
+<h2>
+
+Catégorie 1
+
+</h2>
+
+<div
+class="card"
+onclick="showPage('cat1')">
+
+<img
+src="categorie1.PNG"
+alt="Catégorie 1">
+
+<div class="card-text">
+
+<h3>
+
+Catégorie 1
+
+</h3>
+
+<p>
+
+Découvrir les produits
+
+</p>
+
+</div>
+
+</div>
+
+<h2>
+
+Catégorie 2
+
+</h2>
+
+<div
+class="card"
+onclick="showPage('cat2')">
+
+<img
+src="categorie2.PNG"
+alt="Catégorie 2">
+
+<div class="card-text">
+
+<h3>
+
+Catégorie 2
+
+</h3>
+
+<p>
+
+Découvrir les produits
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE CATÉGORIE 1 -->
+<!-- ================================= -->
+
+<div
+id="cat1"
+class="page"
+style="display:none;">
+
+<div class="page-header">
+
+<button
+class="mini-back"
+onclick="showPage('home')">
+
+←
+
+</button>
+
+<h2>
+
+Catégorie 1
+
+</h2>
+
+</div>
+
+<img
+src="categorie1.PNG"
+class="full-img">
+
+<div class="product-box">
+
+<img
+src="produit1.jpg"
+class="product-img">
+
+<div class="product-info">
+
+<h3>
+
+Calçon
+
+</h3>
+
+<p>
+
+Tous les tarifs sont disponibles directement sur notre menu Telegram.
+
+</p>
+
+<a
+
+href="https://t.me/Wallywonkaa51"
+
+target="_blank"
+
+class="link">
+
+🛒 Commander
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product-box">
+
+<img
+src="produit2.PNG"
+class="product-img">
+
+<div class="product-info">
+
+<h3>
+
+Pantalon
+
+</h3>
+
+<p>
+
+Tous les tarifs sont disponibles directement sur notre menu Telegram.
+
+</p>
+
+<a
+
+href="https://t.me/Wallywonkaa51"
+
+target="_blank"
+
+class="link">
+
+🛒 Commander
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE CATÉGORIE 2 -->
+<!-- ================================= -->
+
+<div
+id="cat2"
+class="page"
+style="display:none;">
+
+    <div class="page-header">
+
+        <button
+        class="mini-back"
+        onclick="showPage('home')">
+
+            ←
+
+        </button>
+
+        <h2>Catégorie 2</h2>
+
+    </div>
+
+    <img
+    src="categorie2.PNG"
+    class="full-img">
+
+    <div class="product-box">
+
+        <video
+        class="product-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls>
+
+            <source
+            src="produit3.MP4"
+            type="video/mp4">
+
+        </video>
+
+        <div class="product-info">
+
+            <h3>Veste</h3>
+
+            <p>
+
+                Tous les tarifs sont disponibles directement sur notre menu Telegram.
+
+            </p>
+
+            <a
+            class="link"
+            href="https://t.me/Wallywonkaa51"
+            target="_blank">
+
+                🛒 Commander
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="product-box">
+
+        <video
+        class="product-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls>
+
+            <source
+            src="produit4.MP4"
+            type="video/mp4">
+
+        </video>
+
+        <div class="product-info">
+
+            <h3>Manteau</h3>
+
+            <p>
+
+                Tous les tarifs sont disponibles directement sur notre menu Telegram.
+
+            </p>
+
+            <a
+            class="link"
+            href="https://t.me/Wallywonkaa51"
+            target="_blank">
+
+                🛒 Commander
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- MENU -->
+<!-- ================================= -->
+
+<div id="menu" class="page" style="display:none;">
+
+    <div class="page-header">
+
+        <button
+        class="mini-back"
+        onclick="showPage('home')">
+
+            ←
+
+        </button>
+
+        <h2>📜 Menu</h2>
+
+    </div>
+
+    <img
+    class="full-img"
+    src="image.jpeg"
+    alt="Menu">
+
+</div>
+
+<!-- ================================= -->
+<!-- LIVRAISON -->
+<!-- ================================= -->
+
+<div id="livraison" class="page" style="display:none;">
+
+    <div class="page-header">
+
+        <button
+        class="mini-back"
+        onclick="showPage('home')">
+
+            ←
+
+        </button>
+
+        <h2>🚚 Livraison</h2>
+
+    </div>
+
+    <img
+    class="full-img"
+    src="livraison.jpg"
+    alt="Livraison">
+
+</div>
+
+<!-- ================================= -->
+<!-- LIENS -->
+<!-- ================================= -->
+
+<div id="links" class="page" style="display:none;">
+
+    <div class="page-header">
+
+        <button
+        class="mini-back"
+        onclick="showPage('home')">
+
+            ←
+
+        </button>
+
+        <h2>🔗 Liens</h2>
+
+    </div>
+
+    <div class="product-box" style="text-align:center;">
+
+        <img
+        src="telegram.PNG"
+        class="telegram-icon"
+        style="width:70px;height:70px;margin:20px auto;">
+
+        <h3>Telegram</h3>
+
+        <p>
+
+            Rejoignez notre canal Telegram.
+
+        </p>
+
+        <a
+        class="link"
+        href="https://t.me/Wallywonkaa51"
+        target="_blank">
+
+            Rejoindre
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- MENU BAS -->
+<!-- ================================= -->
+
+<nav id="bottomNav" style="display:none;">
+
+    <button onclick="showPage('home')">
+
+        🏠
+
+        <span>Accueil</span>
+
+    </button>
+
+    <button onclick="showPage('menu')">
+
+        📜
+
+        <span>Menu</span>
+
+    </button>
+
+    <button onclick="showPage('livraison')">
+
+        🚚
+
+        <span>Livraison</span>
+
+    </button>
+
+    <button onclick="showPage('links')">
+
+        🔗
+
+        <span>Liens</span>
+
+    </button>
+
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>
