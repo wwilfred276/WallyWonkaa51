@@ -1,0 +1,1443 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#09000f;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    padding-bottom:95px;
+    position:relative;
+
+}
+
+/* ================================= */
+/* FOND ANIMÉ */
+/* ================================= */
+
+.bg-animation{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-10;
+
+}
+
+.circle{
+
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    animation:float 12s infinite ease-in-out;
+
+}
+
+.c1{
+
+    width:320px;
+    height:320px;
+    background:#ff2bd640;
+    top:-120px;
+    left:-120px;
+
+}
+
+.c2{
+
+    width:280px;
+    height:280px;
+    background:#7a00ff40;
+    bottom:-120px;
+    right:-120px;
+    animation-delay:3s;
+
+}
+
+.c3{
+
+    width:220px;
+    height:220px;
+    background:#ff2bd620;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation-delay:6s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-40px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ================================= */
+/* IMAGES */
+/* ================================= */
+
+img,
+video{
+
+display:block;
+max-width:100%;
+
+}
+
+/* ================================= */
+/* LOADER */
+/* ================================= */
+
+.intro-loader{
+
+position:fixed;
+inset:0;
+z-index:99999;
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+
+url("loading-bg.PNG") center/cover;
+
+}
+
+.loader-content{
+
+width:90%;
+max-width:420px;
+padding:35px;
+border-radius:30px;
+text-align:center;
+
+background:rgba(0,0,0,.45);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 0 35px rgba(255,43,214,.45);
+
+}
+
+.loader-logo{
+
+width:110px;
+height:110px;
+margin:auto;
+border-radius:50%;
+
+box-shadow:
+
+0 0 25px #ff2bd6;
+
+animation:pulseLogo 2s infinite;
+
+}
+
+@keyframes pulseLogo{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.loader-content h2{
+
+margin-top:20px;
+font-size:28px;
+letter-spacing:2px;
+
+text-shadow:
+
+0 0 15px #ff2bd6;
+
+}
+
+.loader-subtitle{
+
+margin:15px 0;
+
+font-size:15px;
+
+color:#ddd;
+
+}
+
+.loading-progress{
+
+height:12px;
+border-radius:30px;
+overflow:hidden;
+
+background:rgba(255,255,255,.1);
+
+}
+
+.loading-fill{
+
+height:100%;
+width:0;
+
+border-radius:30px;
+
+background:
+
+linear-gradient(90deg,#ff2bd6,#7a00ff,#ff2bd6);
+
+animation:loadingBar 3s forwards;
+
+}
+
+@keyframes loadingBar{
+
+to{
+
+width:100%;
+
+}
+
+}
+
+/* ================================= */
+/* PAGE CONNEXION */
+/* ================================= */
+
+.secure-page{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+
+}
+
+.secure-card{
+
+    width:100%;
+    max-width:420px;
+
+    padding:35px 28px;
+
+    border-radius:32px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+
+    0 0 35px rgba(255,43,214,.35);
+
+}
+
+.logo{
+
+    width:95px;
+    height:95px;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    object-fit:cover;
+
+    box-shadow:
+
+    0 0 25px #ff2bd6;
+
+}
+
+.secure-lock{
+
+    font-size:42px;
+
+    margin:18px 0 10px;
+
+}
+
+.secure-card h1{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+    text-shadow:0 0 15px #ff2bd6;
+
+}
+
+.secure-card p{
+
+    color:#d5d5d5;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+}
+
+.secure-line{
+
+    margin:25px 0;
+
+    height:1px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    #ff2bd6,
+    transparent);
+
+}
+
+.timer-title{
+
+    color:#ff9df0;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:18px 0 25px;
+
+}
+
+.timer div{
+
+    width:82px;
+
+    padding:15px 0;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.timer strong{
+
+    display:block;
+
+    font-size:30px;
+
+}
+
+.timer span{
+
+    color:#ff9df0;
+
+    font-size:12px;
+
+}
+
+.timer b{
+
+    font-size:28px;
+
+    color:#ff2bd6;
+
+}
+
+.secure-card label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-bottom:10px;
+
+    font-weight:bold;
+
+}
+
+#codeInput{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    outline:none;
+
+    padding:0 18px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:16px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+#codeInput:focus{
+
+    border-color:#ff2bd6;
+
+    box-shadow:0 0 18px rgba(255,43,214,.5);
+
+}
+
+.error-msg{
+
+    height:22px;
+
+    margin-top:8px;
+
+    color:#ff5959;
+
+    font-size:13px;
+
+}
+
+.secure-btn{
+
+    width:100%;
+
+    height:56px;
+
+    margin-top:12px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(135deg,
+    #ff2bd6,
+    #7a00ff);
+
+    box-shadow:
+
+    0 0 25px rgba(255,43,214,.45);
+
+    transition:.25s;
+
+}
+
+.secure-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ================================= */
+/* PAGE SUCCÈS */
+/* ================================= */
+
+.success-page{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#09000fee;
+
+    z-index:9999;
+
+}
+
+.success-card{
+
+    width:320px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+}
+
+.success-check{
+
+    width:95px;
+
+    height:95px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:48px;
+
+    color:#43ff84;
+
+    border:4px solid #43ff84;
+
+    box-shadow:0 0 25px #43ff84;
+
+}
+
+.success-card h2{
+
+    margin-top:20px;
+
+    font-size:26px;
+
+}
+
+.success-card p{
+
+    margin-top:12px;
+
+    color:#ddd;
+
+}
+
+/* ================================= */
+/* BARRE DU HAUT */
+/* ================================= */
+
+.shop-topbar{
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    height:72px;
+
+    padding:0 15px;
+
+    background:linear-gradient(
+    135deg,
+    #1a001f,
+    #500072,
+    #ff2bd6);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 8px 30px rgba(255,43,214,.35);
+
+}
+
+.top-btn,
+.telegram-btn{
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.10);
+
+    transition:.25s;
+
+}
+
+.top-btn{
+
+    color:white;
+    font-size:24px;
+
+}
+
+.top-btn:hover,
+.telegram-btn:hover{
+
+    transform:scale(1.08);
+
+    background:#ff2bd6;
+
+}
+
+.telegram-icon{
+
+    width:22px;
+    height:22px;
+
+    object-fit:contain;
+
+}
+
+.top-logo{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    box-shadow:
+    0 0 20px #ff2bd6;
+
+}
+
+.order-timer{
+
+    margin-left:auto;
+
+    padding:9px 14px;
+
+    border-radius:20px;
+
+    background:rgba(0,0,0,.35);
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    box-shadow:
+    0 0 18px rgba(255,255,255,.10);
+
+}
+
+.order-timer.warning{
+
+    color:#ffd54d;
+
+    box-shadow:
+    0 0 18px #ffd54d;
+
+}
+
+.order-timer.danger{
+
+    color:#ff5555;
+
+    box-shadow:
+    0 0 18px #ff5555;
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+0%,100%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:.4;
+
+}
+
+}
+
+/* ================================= */
+/* BANDEAU */
+/* ================================= */
+
+.delivery-marquee{
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(90deg,
+    #ff2bd6,
+    #7a00ff,
+    #ff2bd6);
+
+    padding:10px 0;
+
+}
+
+.delivery-track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:marquee 16s linear infinite;
+
+}
+
+.delivery-track span{
+
+    margin-right:60px;
+
+    white-space:nowrap;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+}
+
+@keyframes marquee{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
+
+/* ================================= */
+/* BANNIÈRE */
+/* ================================= */
+
+.home-banner{
+
+    position:relative;
+
+    margin:18px;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 0 30px rgba(255,43,214,.35);
+
+}
+
+.banner-image{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.banner-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:24px;
+
+    background:linear-gradient(
+    transparent,
+    rgba(0,0,0,.7));
+
+}
+
+.banner-overlay h1{
+
+    font-size:32px;
+
+    text-shadow:
+    0 0 15px #ff2bd6;
+
+}
+
+.banner-overlay p{
+
+    margin-top:8px;
+
+    color:#ddd;
+
+}
+
+/* ================================= */
+/* ACCUEIL */
+/* ================================= */
+
+.page{
+
+    display:none;
+
+    width:100%;
+    max-width:520px;
+
+    margin:auto;
+
+    animation:pageFade .35s;
+
+}
+
+@keyframes pageFade{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.select-btn{
+
+    width:calc(100% - 36px);
+
+    margin:20px auto;
+
+    display:block;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    background:linear-gradient(135deg,#ff2bd6,#7a00ff);
+
+    box-shadow:0 0 25px rgba(255,43,214,.35);
+
+    transition:.25s;
+
+}
+
+.select-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.page h2{
+
+margin:24px 18px 15px;
+
+font-size:23px;
+
+text-shadow:0 0 10px #ff2bd6;
+
+}
+
+/* ================================= */
+/* CARTES */
+/* ================================= */
+
+.card{
+
+margin:0 18px 25px;
+
+overflow:hidden;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.10);
+
+backdrop-filter:blur(16px);
+
+box-shadow:0 0 22px rgba(255,43,214,.20);
+
+transition:.25s;
+
+cursor:pointer;
+
+}
+
+.card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 30px rgba(255,43,214,.45);
+
+}
+
+.card img{
+
+width:100%;
+
+display:block;
+
+}
+
+.card-text{
+
+padding:18px;
+
+}
+
+.card-text h3{
+
+font-size:22px;
+
+margin-bottom:6px;
+
+}
+
+.card-text p{
+
+color:#d8d8d8;
+
+font-size:15px;
+
+}
+
+/* ================================= */
+/* HEADER DES PAGES */
+/* ================================= */
+
+.page-header{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+padding:18px;
+
+}
+
+.mini-back{
+
+width:42px;
+
+height:42px;
+
+border:none;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:22px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+transition:.25s;
+
+}
+
+.mini-back:hover{
+
+background:#ff2bd6;
+
+transform:scale(1.08);
+
+}
+
+/* ================================= */
+/* IMAGES GRANDES */
+/* ================================= */
+
+.full-img{
+
+    width:calc(100% - 36px);
+
+    margin:0 auto 25px;
+
+    border-radius:22px;
+
+    box-shadow:0 0 25px rgba(255,43,214,.25);
+
+}
+
+/* ================================= */
+/* PRODUITS PREMIUM */
+/* ================================= */
+
+.product-box{
+
+    width:calc(100% - 36px);
+
+    margin:0 auto 24px;
+
+    padding:16px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 0 25px rgba(255,43,214,.20);
+
+    overflow:hidden;
+
+}
+
+.product-img,
+.product-video{
+
+    width:100%;
+
+    border-radius:18px;
+
+    margin-bottom:16px;
+
+    background:#000;
+
+}
+
+.product-video{
+
+    max-height:430px;
+
+    object-fit:cover;
+
+}
+
+.product-info h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    text-shadow:0 0 12px #ff2bd6;
+
+}
+
+.product-info p{
+
+    color:#ddd;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    margin-bottom:18px;
+
+}
+
+/* ================================= */
+/* BOUTONS */
+/* ================================= */
+
+.link{
+
+    width:100%;
+
+    height:52px;
+
+    border-radius:17px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    background:linear-gradient(135deg,#ff2bd6,#7a00ff);
+
+    box-shadow:0 0 22px rgba(255,43,214,.38);
+
+    transition:.25s;
+
+}
+
+.link:hover{
+
+    transform:scale(1.03);
+
+}
+
+.link:active,
+.card:active,
+.select-btn:active,
+.secure-btn:active,
+.mini-back:active,
+.top-btn:active,
+.telegram-btn:active{
+
+    transform:scale(.96);
+
+}
+
+/* ================================= */
+/* CARTE LIENS */
+/* ================================= */
+
+#links .product-box{
+
+    padding:26px 20px;
+
+}
+
+#links .product-box h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+#links .product-box p{
+
+    color:#ddd;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    margin-bottom:20px;
+
+}
+
+/* ================================= */
+/* EFFETS GLASS */
+/* ================================= */
+
+.card,
+.product-box,
+.secure-card,
+.success-card,
+.loader-content{
+
+    position:relative;
+
+}
+
+.card::before,
+.product-box::before,
+.secure-card::before,
+.success-card::before,
+.loader-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.10),
+        rgba(255,255,255,0)
+    );
+
+}
+
+/* ================================= */
+/* MENU BAS */
+/* ================================= */
+
+nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:520px;
+
+    height:74px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    border-radius:24px 24px 0 0;
+
+    background:rgba(10,10,18,.95);
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 -5px 25px rgba(0,0,0,.45);
+
+    z-index:999;
+
+}
+
+nav button{
+
+    flex:1;
+
+    height:100%;
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+nav button span{
+
+    font-size:12px;
+
+}
+
+nav button:hover{
+
+    color:#ff2bd6;
+
+    background:rgba(255,43,214,.10);
+
+}
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media(max-width:480px){
+
+    .shop-topbar{
+
+        height:66px;
+
+        padding:0 12px;
+
+        gap:9px;
+
+    }
+
+    .top-btn,
+    .telegram-btn{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+    .top-logo{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .order-timer{
+
+        font-size:13px;
+
+        padding:8px 10px;
+
+    }
+
+    .secure-card{
+
+        padding:30px 22px;
+
+    }
+
+    .timer div{
+
+        width:74px;
+
+    }
+
+    .banner-overlay h1{
+
+        font-size:26px;
+
+    }
+
+    .product-info h3{
+
+        font-size:22px;
+
+    }
+
+    .product-info p{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media(max-width:380px){
+
+    .order-timer{
+
+        font-size:12px;
+
+        padding:7px 8px;
+
+    }
+
+    .delivery-track span{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ================================= */
+/* TELEGRAM MINI APP */
+/* ================================= */
+
+html,
+body{
+
+    overscroll-behavior:none;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+button,
+a{
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
