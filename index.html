@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎩 Wally Wonkaa</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+<div class="banner-urban">
+
+    <div class="bg-glow"></div>
+
+    <!-- BANNIÈRE ANIMÉE -->
+    <div class="scroll-banner">
+        <div class="scroll-track">
+            <span>✨ WALLY WONKAA</span>
+            <span>🕘 HORAIRE 11H / 4H</span>
+            <span>🚚 LIVRAISON -15 MIN</span>
+            <span>🔥 NOUVEAUTÉS DISPONIBLES</span>
+            <span>💜 PLUS QU’UN SHOP, UN MOUVEMENT</span>
+
+            <span>✨ WALLY WONKAA</span>
+            <span>🕘 HORAIRE 11H / 4H</span>
+            <span>🚚 LIVRAISON -15 MIN</span>
+            <span>🔥 NOUVEAUTÉS DISPONIBLES</span>
+            <span>💜 PLUS QU’UN SHOP, UN MOUVEMENT</span>
+        </div>
+    </div>
+
+    <img class="logo" src="logo.jpg">
+
+    <button class="select-btn">NOS PRODUITS <span>▼</span></button>
+
+    <h2>Catégorie 1</h2>
+    <div class="card" onclick="showPage('cat1')">
+        <img src="categorie1.PNG">
+    </div>
+
+    <h2>Catégorie 2</h2>
+    <div class="card" onclick="showPage('cat2')">
+        <img src="categorie2.PNG">
+    </div>
+</div>
+
+<!-- CATÉGORIE 1 -->
+<div id="cat1" class="page">
+    <h2>Catégorie 1</h2>
+    <img class="full-img" src="categorie1.PNG">
+
+    <div class="product-box">
+        <img class="product-img" src="produit1.jpg">
+        <h3>T-shirt</h3>
+        <p>Vous pourrez retrouver tous nos tarifs pour les t-shirts directement sur le menu.</p>
+        <a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20%F0%9F%91%8B%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20un%20T-shirt%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27informations%20%3F%20Merci%20%21">🛒 Commander</a>
+    </div>
+
+    <div class="product-box">
+        <img class="product-img" src="produit2.PNG">
+        <h3>Pantalon</h3>
+        <p>Vous pourrez retrouver tous nos tarifs pour les pantalons directement sur le menu.</p>
+        <a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20%F0%9F%91%8B%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20un%20pantalon%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27informations%20%3F%20Merci%20%21">🛒 Commander</a>
+    </div>
+
+    <button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<!-- CATÉGORIE 2 -->
+<div id="cat2" class="page">
+    <h2>Catégorie 2</h2>
+    <img class="full-img" src="categorie2.PNG" alt="Catégorie 2">
+
+    <div class="product-box">
+        <video class="product-video" autoplay muted loop playsinline controls>
+            <source src="produit3.MP4" type="video/mp4">
+        </video>
+
+        <h3>Casquette</h3>
+        <p>Vous pourrez retrouver tous nos tarifs pour les casquettes directement sur le menu.</p>
+
+        <a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20%F0%9F%91%8B%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20une%20casquette%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27informations%20%3F%20Merci%20%21">🛒 Commander</a>
+    </div>
+
+    <div class="product-box">
+        <video class="product-video" autoplay muted loop playsinline controls>
+            <source src="produit4.MP4" type="video/mp4">
+        </video>
+
+        <h3>Veste</h3>
+        <p>Vous pourrez retrouver tous nos tarifs pour les vestes directement sur le menu.</p>
+
+        <a class="link" href="https://t.me/edm45s?text=Bonjour%20%21%20%F0%9F%91%8B%0A%0AJe%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20une%20veste%20et%20j%27aimerais%20en%20savoir%20plus.%0A%0APouvez-vous%20me%20donner%20plus%20d%27informations%20%3F%20Merci%20%21">🛒 Commander</a>
+    </div>
+
+    <button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<!-- MENU -->
+<div id="menu" class="page">
+    <h2>📜 Menu</h2>
+    <img class="full-img" src="image.jpeg">
+</div>
+
+<!-- LIVRAISON -->
+<div id="livraison" class="page">
+    <h2>🚚 Livraison</h2>
+    <img class="full-img" src="livraison.jpg">
+</div>
+
+<!-- LIENS -->
+<div id="links" class="page">
+    <h2>🔗 Liens</h2>
+    <a class="link" href="https://t.me/edm45s" target="_blank">Telegram</a>
+    <a class="link" href="https://www.tiktok.com/@wallywonka____?_r=1&_t=ZN-97YIsnYRhuo" target="_blank">TikTok</a>
+    <a class="link" href="https://snapchat.com/t/gRYuTGxM" target="_blank" rel="noopener noreferrer">Snapchat</a>
+    <button class="back-btn" onclick="showPage('home')">⬅ Retour</button>
+</div>
+
+<nav>
+    <button onclick="showPage('home')">🏠<span>Accueil</span></button>
+    <button onclick="showPage('menu')">📜<span>Menu</span></button>
+    <button onclick="showPage('livraison')">🚚<span>Livraison</span></button>
+    <button onclick="showPage('links')">🔗<span>Liens</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
